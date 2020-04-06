@@ -1,0 +1,14 @@
+provider "aws" {
+
+  access_key = "AKIAYDJCRGDEBJ2Q4G7E"
+  secret_key = "xaZDPuCX8sFOEH1UIDQpMQ926b1kRDd6hM223tTr"
+  region     = "us-west-2"
+}
+resource "aws_ebs_volume" "example" {
+  availability_zone = "us-west-2a"
+  size              = 10
+
+  tags = {
+    Name = "Testing_elk"
+  }
+}

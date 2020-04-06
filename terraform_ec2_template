@@ -1,0 +1,16 @@
+provider "aws" {
+
+  access_key = "AKIAYDJCRGDEBJ2Q4G7E"
+  secret_key = "xaZDPuCX8sFOEH1UIDQpMQ926b1kRDd6hM223tTr"
+  region     = "us-west-2"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0d1cd67c26f5fca19"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "terraform-user"
+
+  }
+}
